@@ -2,9 +2,8 @@ package com.epam.heroes_game
 
 import java.lang.reflect.Constructor
 
-import com.epam.heroes_game.models.Hero
+import com.epam.heroes_game.traits.Hero
 import org.reflections.Reflections
-
 
 object HeroFactory {
 

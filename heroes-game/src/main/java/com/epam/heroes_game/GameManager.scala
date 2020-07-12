@@ -1,6 +1,6 @@
 package com.epam.heroes_game
 
-import com.epam.heroes_game.models.Hero
+import com.epam.heroes_game.traits.Hero
 
 object GameManager {
   def fight(hero1: Hero, hero2: Hero): Unit = {

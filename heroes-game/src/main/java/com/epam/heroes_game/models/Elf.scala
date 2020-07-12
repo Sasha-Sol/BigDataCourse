@@ -1,5 +1,7 @@
 package com.epam.heroes_game.models
 
+import com.epam.heroes_game.traits.Hero
+
 case class Elf() extends Hero {
   var power:Int = 10
   var hp:Int = 10
