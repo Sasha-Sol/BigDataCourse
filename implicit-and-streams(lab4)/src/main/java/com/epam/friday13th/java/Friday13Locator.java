@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class Friday13Locator {
 
-    public static Map<Integer, Long> getSortedFridaysBy(int startYear, int endYear) {
+    public static Map<Integer, Long> getSorted13thsFridaysByYearsAndCount(int startYear, int endYear) {
 
         return LocalDate.of(startYear, Month.JANUARY, 13)
                 .datesUntil(LocalDate.of(endYear, Month.DECEMBER, 31))
