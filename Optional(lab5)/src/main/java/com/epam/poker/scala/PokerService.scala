@@ -3,7 +3,7 @@ package com.epam.poker.scala
 import scala.util.Try
 
 object PokerService {
-  def getWinner(playersBids:List[Option[Bid]], observersBids:List[Option[Bid]]) = {
+  def getWinner(playersBids: List[Option[Bid]], observersBids: List[Option[Bid]]) = {
     Try(
       playersBids
         .flatten
@@ -15,7 +15,7 @@ object PokerService {
             .flatten
             .maxBy(_.amoutn)
         ).
-          getOrElse("The is no winners")
+          getOrElse("The was no bidders")
       )
   }
 }

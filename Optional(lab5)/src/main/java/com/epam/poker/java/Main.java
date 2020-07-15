@@ -23,20 +23,29 @@ public class Main {
                 Optional.empty()
         );
 
-        List<Optional<Bid>> playerEmptyOptionals = List.of(
-                Optional.empty(),
-                Optional.empty()
-        );
-
-        List<Optional<Bid>> observersEmptyOptionals = List.of(
+        List<Optional<Bid>> emptyOptionals = List.of(
                 Optional.empty(),
                 Optional.empty()
         );
 
 
-        PokerService.getWinner(playerBids, observerBids);
-        PokerService.getWinner(playerEmptyOptionals, observerBids);
-        PokerService.getWinner(playerEmptyOptionals, observersEmptyOptionals);
+        PokerService.getWinner(playerBids, observerBids)
+                .ifPresentOrElse(
+                        bidder -> System.out.println("The bidder " + bidder.getBidder() + " Won!"),
+                        () -> System.out.println("The was no bidders")
+                );
+
+        PokerService.getWinner(emptyOptionals, observerBids)
+                .ifPresentOrElse(
+                        bidder -> System.out.println("The bidder " + bidder.getBidder() + " Won!"),
+                        () -> System.out.println("The was no bidders")
+                );
+
+        PokerService.getWinner(emptyOptionals, emptyOptionals)
+                .ifPresentOrElse(
+                        bidder -> System.out.println("The bidder " + bidder.getBidder() + " Won!"),
+                        () -> System.out.println("The was no bidders")
+                );
 
     }
 }
