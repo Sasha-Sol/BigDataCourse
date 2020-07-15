@@ -1,7 +1,9 @@
 package com.epam.employee_salary.java;
 
+
 public class Employee {
     private double salary;
+
     Employee(double salary) {
         this.salary = salary;
     }
@@ -12,7 +14,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Emplyee with slary:" + getSalary();
+        return "Employee with salary:" + getSalary();
     }
 
 }
