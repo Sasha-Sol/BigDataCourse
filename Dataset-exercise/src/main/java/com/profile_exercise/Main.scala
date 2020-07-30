@@ -46,7 +46,5 @@ object Main {
       .select("name")
       .show()
 
-    ///5 Flat map solution///
-
   }
 }
