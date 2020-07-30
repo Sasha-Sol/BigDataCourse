@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
-public class WordCountService implements Serializable {
+public class WordCountService {
 
     private static String FILE_PATH = "wordcount-springbootwithspark/src/main/java/com/wordcount/data/";
 
